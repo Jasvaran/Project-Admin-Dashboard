@@ -47,6 +47,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
 body{
 	font-family: "Roboto", sans-serif;
 	max-height: 100vh;
@@ -61,10 +63,10 @@ body{
 
 }
 
+/* ----------------------------- Sidebar -------------------------- */
 .sidebar {
 	font-size: 20px;
 	color: white;
-	border: 1px solid black;
 	background-color: #0ea5e9;
     grid-row-start: 1;
     grid-row-end: 3;
@@ -92,30 +94,102 @@ ul {
 	
 }
 
+ul > li {
+	margin-bottom: 10px;
+}
+
+li > span {
+	padding-left: 10px;
+}
+
+/* ----------------------------- HEADER -----------------------------  */
 .header{
 	background-color: white;
-	border: 1px solid black;
 	display: grid;
 	grid-auto-flow: row;
 	grid-template-columns: 7fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 2fr;
+	box-shadow: 10px 5px 5px #a1a1aa;
 
 }
 
-.search{
+.header > button > img {
+	height: 48px;
+	width: 48px;
+
 }
-.bell{
+/* -------------------magnifying glass------------------- */
+.header > div > button > img {
+	padding-top: 3px;
+	height: 20px;
+	width: 20px;
+}
+.header > div > button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20px;
+	width: 20px;
+}
+.search {
+	gap: 5px;
+	padding-top: 20px;
+	padding-left: 20px;
+	display: flex;
+}
+
+
+#searchbar{
+	padding-left: 10px;
+	background-color: #d1d5db;
+	border-radius: 10px;
+	width: 450px;
+	height: 20px;
+	border-style: none;
+}
+
+/* -------------------profile icon ------------- */
+.header > div > img {
+	height: 60px;
+	width: 60px;
+}
+
+
+.bell, .profile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	padding-top: 10px;
 }
 .user-name{
+	padding-top: 30px;
 }
-.greeting{
-}
-.new{
-}
-.upload{
-}
-.share{}
 
+.header > span{
+	padding-top: 20px;
+}
+.new, .upload, .share{
+	height: 30px;
+	width: 100px;
+	background-color: #0ea5e9;
+	border-radius: 10px;
+	color: white;
+	border-color: white;
+
+}
+
+
+.greeting{
+	display: flex;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+
+
+/* ----------------------------- MAIN CONTENT -----------------------------  */
 .main-content{
 	gap: 20px;
 	display: grid;
@@ -124,6 +198,11 @@ ul {
 	padding: 40px 25px;
 
 }
+.title-1 {
+	padding-left: 20px;
+	font-size: 20px;
+	padding-bottom: 5px;
+}
 .project-container{
 	grid-area: 1/1/3/3;
 	display: flex;
@@ -131,37 +210,133 @@ ul {
 	justify-content: start;
 	align-items: flex-start;
 
+
 }
 .projects{
 	flex: 1;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	column-gap: 20px;
+	row-gap: 20px;
+
 
 
 }
+
+.card {
+	padding: 20px;
+	background: white;
+	border-left: 10px solid orange;
+	border-radius: 10px;
+	display: grid;
+	box-shadow: 10px 5px 5px #a1a1aa;
+
+
+  }
+
+  .card > div  {
+	display: grid;
+	grid-auto-flow: column;
+	place-content: end;
+	gap: 10px;
+
+  }
+.card > p {
+	color: grey;
+}
+
+
+/* ----------------------------- ANNOUNCEMENT -----------------------------  */
 .announcements{
 	grid-column-start: 3;
 	grid-column-end: 4;
 	display: flex;
 	flex-direction: column;
 
+
 }
 
+.title-2 {
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.announcements > article {
+	border-radius: 10px;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 10px 5px 5px #a1a1aa;
+
+
+}
+
+
+
 .announcements > article > div {
+	font-size: 15px;
 	border-bottom: 1px solid grey;
 	padding: 20px;
 }
+
+.announcement-text{
+	color: grey;
+}
+
+.announcements > article > div:first-line{
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+
+/* ----------------------------- TRENDING -----------------------------  */
 .trending{
 	grid-column-start: 3;
 	grid-column-end: 4;
 	display: flex;
 	flex-direction: column;
 
+
+}
+
+.title-3 {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.trending > article {
+	background-color: white;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	display: grid;
+	justify-items: flex-start;
+	padding-left: 5px;
+	padding-top: 3px;
+	box-shadow: 10px 5px 5px #a1a1aa;
+
+
+
+}
+
+.trending > article > div {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	line-height: 25px;
+	gap: 20px;
+	padding-bottom: 20px;
+	flex: 1;
+	font-size: 18px;
+}
+
+.trending > article > div > img {
+	height: 48px;
+	width: 48px;
 }
 
 
-
-
-button {
-	width: 50px;
+button{
+	background-color: white;
+	border: none;
 }
