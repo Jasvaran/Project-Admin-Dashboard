@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -46,11 +47,121 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+body{
+	font-family: "Roboto", sans-serif;
+	max-height: 100vh;
+	box-sizing: border-box;
+}
 
 .container {
+	border: 1px solid black;
     background-color: #d1d5db;
     display: grid;
     grid-template-columns: 1fr 4fr;
 
+}
+
+.sidebar {
+	font-size: 20px;
+	color: white;
+	border: 1px solid black;
+	background-color: #0ea5e9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 4fr;
+
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+.dashboard {
+	font-size: 36px;
+	display: grid;
+	grid-auto-flow: column;
+	place-items: center;
+	place-content: start;
+	gap: 10px;
+	padding-left: 5px;
+}
+
+ul {
+	list-style: none;
+	padding: 10px;
+	
+}
+
+.header{
+	background-color: white;
+	border: 1px solid black;
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: 7fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 2fr;
+
+}
+
+.search{
+}
+.bell{
+}
+.user-name{
+}
+.greeting{
+}
+.new{
+}
+.upload{
+}
+.share{}
+
+.main-content{
+	gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 0.8fr;
+	grid-template-rows: 1fr 1fr;
+	padding: 40px 25px;
+
+}
+.project-container{
+	grid-area: 1/1/3/3;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: flex-start;
+
+}
+.projects{
+	flex: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+
+}
+.announcements{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.announcements > article > div {
+	border-bottom: 1px solid grey;
+	padding: 20px;
+}
+.trending{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	display: flex;
+	flex-direction: column;
+
+}
+
+
+
+
+button {
+	width: 50px;
 }
